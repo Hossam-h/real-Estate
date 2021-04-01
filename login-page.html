@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Build for me</title>
+    <link rel="stylesheet" href="css/real-estate-style.css">
+    <link rel="icon" href="css/houseicon.png">
+</head>
+<body>
+    <div class="container-all-login-page">
+        <div class="container-opacity">
+            <div class="container-login">
+            
+                <input type="text" placeholder="Enter your username ">
+                <input type="password" placeholder="Enter your password" id="my-pass">
+                <input type="checkbox" id="checkbox"><span id="show-pass">Show your password</span>
+                <div class="clearfix"></div>
+                <a href="">Login</a>
+                <span>Don't have account ? <a href="#">Signup</a> </span>
+
+            </div>
+    </div>
+</div>
+<script>
+    let myCheckbox=document.getElementById('checkbox'),
+myShow_pass=document.getElementById('show-pass'),
+myInput_pass=document.getElementById('my-pass')
+
+myCheckbox.onclick=function(){
+    if(myShow_pass.textContent==='Show your password'){
+       
+    myInput_pass.setAttribute('type','text');
+        myShow_pass.textContent='hidden your password';
+        
+   }
+  else if(myShow_pass.textContent==='hidden your password'){
+    myInput_pass.setAttribute('type','password');
+      myShow_pass.textContent='Show your password';
+  }
+
+}
+</script>
+</body>
+</html>
