@@ -18,19 +18,40 @@ mycontain_Li=document.querySelectorAll('.ul-head li')
 /* dynamic links  */
 let firstLinkli=document.createElement('a')
 firstLinkli.setAttribute('href','#')
+firstLinkli.setAttribute('id','firstLinkli_id')
 firstLinkli.textContent="Home"
+firstLinkli.onclick=function(){
+    removeAll()
+    firstLinkli.classList.add('heighlite')
+}
 
 let scondeLinkli=document.createElement('a')
 scondeLinkli.setAttribute('href','#our-servecis')
+scondeLinkli.setAttribute('id','scondeLinkli_id')
 scondeLinkli.textContent="servecis"
+scondeLinkli.onclick=function(){
+    removeAll()
+    scondeLinkli.classList.add('heighlite')
+}
 
 let thirdlinkli=document.createElement('a')
 thirdlinkli.setAttribute('href','#connecting')
+thirdlinkli.setAttribute('id','thirdlinkli_id')
 thirdlinkli.textContent="Conuct us"
+thirdlinkli.onclick=function(){
+    removeAll()
+    thirdlinkli.classList.add('heighlite')
+}
 
 let fourthLinkli=document.createElement('a')
 fourthLinkli.setAttribute('href','#ournews')
+fourthLinkli.setAttribute('id','fourthLinkli_id')
 fourthLinkli.textContent="news"
+fourthLinkli.onclick=function(){
+    removeAll()
+    fourthLinkli.classList.add('heighlite')
+}
+
 /* dynamic links  */
 
 /* dynamic links  */
@@ -145,3 +166,10 @@ myClose_icon.onclick=function(){
 
 
 /*--------------------------------------------------------------------------------------- */
+
+function removeAll(){
+    firstLinkli.classList.remove('heighlite')
+    scondeLinkli.classList.remove('heighlite')
+    thirdlinkli.classList.remove('heighlite')
+    fourthLinkli.classList.remove('heighlite')
+}
