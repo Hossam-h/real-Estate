@@ -12,57 +12,48 @@ my_moreImage_Array=Array.from(my_moreImage),
 myLink=document.querySelectorAll('.nav-toggle .container-span span')
 
 
-myContain_span=document.querySelectorAll('.container-span span')
-mycontain_Li=document.querySelectorAll('.ul-head li')
+myContain_span=document.querySelector('.container-span')
+mycontain_Li=document.querySelector('.ul-head')
 
-for(var i=0; i<4;  i++){
 
-    let firstLinkli=document.createElement('a')
-    let firstLink=document.createElement('a')
+for(var i=0; i<4; i++){
+    let li_item=document.createElement('li')
+    let link_item=document.createElement('a')
+    link_item.setAttribute('id','link'+i)
+    li_item.appendChild(link_item)
+    mycontain_Li.appendChild(li_item)
 
+    //--------------------------------------
    
-    mycontain_Li[1].appendChild(firstLinkli);
-//----------------------------------------
-   
-    myContain_span[i].appendChild(firstLink);
-    
-    if(i==0){
-    firstLinkli.setAttribute('href','#0')
-    firstLinkli.textContent='Home'
-    mycontain_Li[i].appendChild(firstLinkli);
-    myContain_span[i].appendChild(firstLink);
-    firstLink.textContent='Home'
-    firstLink.setAttribute('href','#0')
-    }
-    if(i==1){
-        firstLinkli.setAttribute('href','#1')
-        firstLinkli.textContent='servecis'
-    mycontain_Li[i].appendChild(firstLinkli);
-    myContain_span[i].appendChild(firstLink);
-    firstLink.textContent='servecis'
-    firstLink.setAttribute('href','#1')
-    }
-    if(i==2){
-        firstLinkli.setAttribute('href','#2')
-    firstLinkli.textContent='Conuct us'
-    mycontain_Li[i].appendChild(firstLinkli);
-    myContain_span[i].appendChild(firstLink);
-    firstLink.textContent='Conuct us'
-    firstLink.setAttribute('href','#2')
-
-    }
-    if(i==3){
-        firstLinkli.setAttribute('href','#3')
-        firstLinkli.textContent='news'
-    mycontain_Li[i].appendChild(firstLinkli);
-    myContain_span[i].appendChild(firstLink);
-    firstLink.textContent='news'
-    firstLink.setAttribute('href','#3')
-    }
-    
 }
 
 
+for(var i=0; i<4; i++){
+    let li_ite2=document.createElement('span')
+    let link_ite2=document.createElement('a')
+    link_ite2.setAttribute('id','lin'+i)
+    li_ite2.appendChild(link_ite2)
+    myContain_span.appendChild(li_ite2)  
+}
+let mylinke_ho=document.getElementById('link0')
+     mylinke_cona=document.getElementById('link1')
+     mylinke_ser=document.getElementById('link2')
+     mylinke_new=document.getElementById('link3')
+
+     mylinke_new.textContent='new'
+     mylinke_ser.textContent='services'
+     mylinke_cona.textContent='connact us'
+     mylinke_ho.textContent='Home'
+//--------------------------------------------------------
+let mylinke_ho2=document.getElementById('lin0')
+     mylinke_cona2=document.getElementById('lin1')
+     mylinke_ser2=document.getElementById('lin2')
+     mylinke_new2=document.getElementById('lin3')
+
+     mylinke_new2.textContent='new'
+     mylinke_ser2.textContent='services'
+     mylinke_cona2.textContent='connact us'
+     mylinke_ho2.textContent='Home'
 
 
 my_button.addEventListener('click',function(){
@@ -114,9 +105,61 @@ myClose_icon.onclick=function(){
 
 /*--------------------------------------------------------------------------------------- */
 
-function removeAll(){
-    firstLinkli.classList.remove('heighlite')
-    scondeLinkli.classList.remove('heighlite')
-    thirdlinkli.classList.remove('heighlite')
-    fourthLinkli.classList.remove('heighlite')
+/*function of scrolls */
+mylinke_ho.onclick=function(){
+window.scrollTo(0,0)
+removeAll()
+mylinke_ho.classList.add('heighlite')
 }
+mylinke_ser.onclick=function(){
+    window.scrollTo(0,700)
+    removeAll()
+    mylinke_ser.classList.add('heighlite')
+}
+mylinke_cona.onclick=function(){
+    removeAll()
+    mylinke_cona.classList.add('heighlite')
+window.scrollTo(0,2400)
+}
+mylinke_new.onclick=function(){
+    removeAll()
+    mylinke_new.classList.add('heighlite')
+window.scrollTo(0,2974)
+}
+
+function scrooloin(){
+console.log(scrollY)
+}
+
+function removeAll(){
+    mylinke_ho.classList.remove('heighlite')
+    mylinke_ser.classList.remove('heighlite')
+    mylinke_cona.classList.remove('heighlite')
+    mylinke_new.classList.remove('heighlite')
+}
+
+
+//-----------------------------------------------------------------------------
+mylinke_ho2.onclick=function(){
+    window.scrollTo(0,0)
+    removeAll()
+    mylinke_ho2.classList.add('heighlite')
+    }
+    mylinke_ser2.onclick=function(){
+        window.scrollTo(0,700)
+        removeAll()
+        mylinke_ser2.classList.add('heighlite')
+    }
+    mylinke_cona2.onclick=function(){
+        removeAll()
+        mylinke_cona2.classList.add('heighlite')
+    window.scrollTo(0,6200)
+    }
+    mylinke_new2.onclick=function(){
+        removeAll()
+        mylinke_new2.classList.add('heighlite')
+    window.scrollTo(0,7598)
+    }
+    
+   
+    
