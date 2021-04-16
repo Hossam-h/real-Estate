@@ -15,7 +15,7 @@ mycontain_Li=document.querySelectorAll('.ul-head li')
 
 
 
-/* dynamic links  */
+/* start dynamic links  */
 let firstLinkli=document.createElement('a')
 firstLinkli.setAttribute('href','#')
 firstLinkli.setAttribute('id','firstLinkli_id')
@@ -52,9 +52,9 @@ fourthLinkli.onclick=function(){
     fourthLinkli.classList.add('heighlite')
 }
 
-/* dynamic links  */
+/* End dynamic links  */
 
-/* dynamic links  */
+/* start dynamic links 2  */
 let firstLink=document.createElement('a')
 firstLink.setAttribute('href','#')
 firstLink.textContent="Home"
@@ -70,7 +70,7 @@ thirdlink.textContent="Conuct us"
 let fourthLink=document.createElement('a')
 fourthLink.setAttribute('href','#ournews')
 fourthLink.textContent="news"
-/* dynamic links  */
+/* end dynamic links 2  */
 
 
 /*appendchild dynamic links */
@@ -92,51 +92,19 @@ my_button.addEventListener('click',function(){
  }
 })
 
-function scroll(){
-if(window.scrollY>0){
-    myNave.style.backgroundColor='white'
-    myLogo.style.color='black'
-    myNave.style.transition='all .5s'
-    myToggle.style.color='black'
-    
-    
-    myLinks_Array.forEach(element => {
-        element.classList.add('active-pink')
-        element.classList.add('black')
-  });
-    myNave.style.height='90px'
-}
- 
- else{
-    myNave.style.backgroundColor='transparent'
-    myLogo.style.color='white'
-    myToggle.style.color='rgb(189, 189, 189)'
-    myLinks_Array.forEach(element => {
-       
-        element.classList.remove('active-pink')
-        element.classList.remove('black')
-        myNave.style.height='90px'
-    });
-    
- }
-}
-
-
-function more_scroll(){
-    if (window.scrollY>100){
-        myNave.style.backgroundColor='white'
-        myLogo.style.color='black'
-        myLogo.style.paddingBottom='0px'
-        myNave.style.transition='all .5s'
-        myNave.style.height='70px'
-        
-    
+/*start the function of scroll */
+function myscroll(){
+    if(window.scrollY>0){
+        myNave.style.position='fixed'
+    }else{
+        myNave.style.position='static' 
     }
 }
- setInterval(scroll,100),
- setInterval(more_scroll,100)
 
-let myToggle=document.getElementById('toggle'),
+setInterval(myscroll,100)
+/*End the function of scroll */
+ 
+let myToggle=document.getElementById('toggle')
  myLink_span=document.querySelectorAll('.nav-toggle span'),
  myClose_icon=document.getElementById('close-icon');
 
