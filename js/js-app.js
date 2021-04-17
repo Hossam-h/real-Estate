@@ -44,6 +44,14 @@ let mylinke_ho=document.getElementById('link0')
      mylinke_ser.textContent='services'
      mylinke_cona.textContent='connact us'
      mylinke_ho.textContent='Home'
+
+     mylinke_new.setAttribute('href','#3')
+     mylinke_ser.setAttribute('href','#1')
+     mylinke_cona.setAttribute('href','#2')
+     mylinke_ho.setAttribute('href','#0')
+
+
+
 //--------------------------------------------------------
 let mylinke_ho2=document.getElementById('lin0')
      mylinke_cona2=document.getElementById('lin1')
@@ -54,6 +62,11 @@ let mylinke_ho2=document.getElementById('lin0')
      mylinke_ser2.textContent='services'
      mylinke_cona2.textContent='connact us'
      mylinke_ho2.textContent='Home'
+
+     mylinke_new2.setAttribute('href','#3')
+     mylinke_ser2.setAttribute('href','#1')
+     mylinke_cona2.setAttribute('href','#2')
+     mylinke_ho2.setAttribute('href','#0')
 
 
 my_button.addEventListener('click',function(){
@@ -105,31 +118,28 @@ myClose_icon.onclick=function(){
 
 /*--------------------------------------------------------------------------------------- */
 
-/*function of scrolls */
+/*function of scrolls  */  
 mylinke_ho.onclick=function(){
-window.scrollTo(0,0)
+
 removeAll()
 mylinke_ho.classList.add('heighlite')
 }
 mylinke_ser.onclick=function(){
-    window.scrollTo(0,700)
+    
     removeAll()
     mylinke_ser.classList.add('heighlite')
 }
 mylinke_cona.onclick=function(){
     removeAll()
     mylinke_cona.classList.add('heighlite')
-window.scrollTo(0,2400)
+
 }
 mylinke_new.onclick=function(){
     removeAll()
     mylinke_new.classList.add('heighlite')
-window.scrollTo(0,2974)
+
 }
 
-function scrooloin(){
-console.log(scrollY)
-}
 
 function removeAll(){
     mylinke_ho.classList.remove('heighlite')
@@ -138,28 +148,35 @@ function removeAll(){
     mylinke_new.classList.remove('heighlite')
 }
 
+function removeAll2(){
+    mylinke_ho2.classList.remove('heighlite')
+    mylinke_ser2.classList.remove('heighlite')
+    mylinke_cona2.classList.remove('heighlite')
+    mylinke_new2.classList.remove('heighlite')
+}
+
 
 //-----------------------------------------------------------------------------
 mylinke_ho2.onclick=function(){
-    window.scrollTo(0,0)
+ 
     removeAll()
     mylinke_ho2.classList.add('heighlite')
     }
     mylinke_ser2.onclick=function(){
-        window.scrollTo(0,700)
+        
         removeAll()
         mylinke_ser2.classList.add('heighlite')
     }
     mylinke_cona2.onclick=function(){
         removeAll()
         mylinke_cona2.classList.add('heighlite')
-    window.scrollTo(0,6200)
+  
     }
     mylinke_new2.onclick=function(){
         removeAll()
         mylinke_new2.classList.add('heighlite')
-    window.scrollTo(0,7598)
+ 
     }
     
-   
-    
+
+    console.log(document.documentElement.scrollY)
