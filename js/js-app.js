@@ -118,7 +118,7 @@ myClose_icon.onclick=function(){
 
 /*--------------------------------------------------------------------------------------- */
 
-/*function of scrolls  */  
+/*function of to add active  */  
 mylinke_ho.onclick=function(){
 
 removeAll()
@@ -140,14 +140,14 @@ mylinke_new.onclick=function(){
 
 }
 
-
+/*function of to remove active  */  
 function removeAll(){
     mylinke_ho.classList.remove('heighlite')
     mylinke_ser.classList.remove('heighlite')
     mylinke_cona.classList.remove('heighlite')
     mylinke_new.classList.remove('heighlite')
 }
-
+/*function of to remove active in toggle_icon  */  
 function removeAll2(){
     mylinke_ho2.classList.remove('heighlite')
     mylinke_ser2.classList.remove('heighlite')
@@ -157,6 +157,8 @@ function removeAll2(){
 
 
 //-----------------------------------------------------------------------------
+
+/*function of to add active in toggle icon  */  
 mylinke_ho2.onclick=function(){
  
     removeAll()
@@ -179,4 +181,4 @@ mylinke_ho2.onclick=function(){
     }
     
 
-    console.log(document.documentElement.scrollY)
+   
