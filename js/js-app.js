@@ -15,7 +15,7 @@ mycontain_Li=document.querySelector('.ul-head')
 for(let i=0; i<4; i++){
     let li_item=document.createElement('li')
     let link_item=document.createElement('a')
-    link_item.setAttribute('id','link'+i)
+   link_item.setAttribute('id','link'+i)
     link_item.setAttribute('data-link','section'+i)
     link_item.setAttribute('class','links')
     li_item.appendChild(link_item)
@@ -31,7 +31,6 @@ all_links1.forEach(item=>{
 
         el.scrollIntoView({
             behavior:"smooth",
-            block:"center"
         })
 
     })
