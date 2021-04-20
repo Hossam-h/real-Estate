@@ -678,6 +678,7 @@ footer{
     margin-top: 50px;
     box-sizing: border-box;
     overflow: hidden;
+    height: 510px;
 }
 
 
@@ -786,6 +787,8 @@ cursor: pointer;
 
 .border{
     margin: 30px auto;
+
+    margin-top: 90px;
      width: 70%;
     border: .5px solid grey;
 }
@@ -801,3 +804,4 @@ cursor: pointer;
     }
 
 }
+

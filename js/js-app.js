@@ -9,21 +9,27 @@ myLink=document.querySelectorAll('.nav-toggle .container-span span')
 myContain_span=document.querySelector('.container-span')
 mycontain_Li=document.querySelector('.ul-head')
 
+let mySections=document.querySelectorAll('.section')
+
+
+
 /* end Global variables */ 
 
 
 for(let i=0; i<4; i++){
     let li_item=document.createElement('li')
     let link_item=document.createElement('a')
-   link_item.setAttribute('id','link'+i)
+    link_item.setAttribute('id','link'+i)
+    //link_item.setAttribute('class','section'+i)
     link_item.setAttribute('data-link','section'+i)
-    link_item.setAttribute('class','links')
+    link_item.setAttribute('class','links section'+i)
     li_item.appendChild(link_item)
     mycontain_Li.appendChild(li_item)
 }
 
 const all_links1=document.querySelectorAll('.links');
-
+console.log(...all_links1)
+all_links1[0].classList.add('heighlite')
 // forEach for scroll
 all_links1.forEach(item=>{
     item.addEventListener('click',()=>{
@@ -31,10 +37,34 @@ all_links1.forEach(item=>{
 
         el.scrollIntoView({
             behavior:"smooth",
+            block:"center"
         })
 
     })
 })
+
+
+window.addEventListener('scroll',()=>{
+    let current="";
+    //console.log(pageYOffset)
+    mySections.forEach(sections=>{
+        const sectionTop=sections.offsetTop;
+        const sectioHeight=sections.clientHeight;
+        if(pageYOffset>=sectionTop-sectioHeight/3){
+            current=sections.getAttribute('id')
+        }
+
+    })
+    all_links1.forEach(links=>{
+        links.classList.remove('heighlite')
+       if(links.classList.contains(current)){
+        links.classList.add('heighlite')
+       }
+    })
+})
+
+
+
 
 for(let i=0; i<4; i++){
     let li_ite2=document.createElement('span')
