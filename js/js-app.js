@@ -1,113 +1,104 @@
-/* start Global variables */ 
-
 let myNave=document.getElementById('nav-head'),
+myLogo=document.getElementById('logo'),
+myLinks=document.querySelectorAll('.ul-head li a'),
+myLinks_Array=Array.from(myLinks),
 myNave_toggle=document.getElementById('nave-toggle'),
 my_button=document.querySelector('.more-detail-bt')
 my_moreImage=document.querySelectorAll('.more'),
 my_moreImage_Array=Array.from(my_moreImage),
+
 myLink=document.querySelectorAll('.nav-toggle .container-span span')
-myContain_span=document.querySelector('.container-span')
-mycontain_Li=document.querySelector('.ul-head')
+console.log(myLink[1].children)
 
-let mySections=document.querySelectorAll('.section')
-
-
-
-/* end Global variables */ 
+myContain_span=document.querySelectorAll('.container-span span')
+mycontain_Li=document.querySelectorAll('.ul-head li')
 
 
-for(let i=0; i<4; i++){
-    let li_item=document.createElement('li')
-    let link_item=document.createElement('a')
-    link_item.setAttribute('id','link'+i)
-    //link_item.setAttribute('class','section'+i)
-    link_item.setAttribute('data-link','section'+i)
-    link_item.setAttribute('class','links section'+i)
-    li_item.appendChild(link_item)
-    mycontain_Li.appendChild(li_item)
+
+/* dynamic links  */
+let firstLinkli=document.createElement('a')
+firstLinkli.setAttribute('href','#')
+firstLinkli.setAttribute('id','firstLinkli_id')
+firstLinkli.textContent="Home"
+firstLinkli.onclick=function(){
+    removeAll()
+    firstLinkli.classList.add('heighlite')
 }
 
-const all_links1=document.querySelectorAll('.links');
-console.log(...all_links1)
-all_links1[0].classList.add('heighlite')
-// forEach for scroll
-all_links1.forEach(item=>{
-    item.addEventListener('click',()=>{
-        const el=document.getElementById(item.getAttribute('data-link'))
-
-        el.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        })
-
-    })
-})
-
-
-window.addEventListener('scroll',()=>{
-    let current="";
-    //console.log(pageYOffset)
-    mySections.forEach(sections=>{
-        const sectionTop=sections.offsetTop;
-        const sectioHeight=sections.clientHeight;
-        if(pageYOffset>=sectionTop-sectioHeight/3){
-            current=sections.getAttribute('id')
-        }
-
-    })
-    all_links1.forEach(links=>{
-        links.classList.remove('heighlite')
-       if(links.classList.contains(current)){
-        links.classList.add('heighlite')
-       }
-    })
-})
-
-
-
-
-for(let i=0; i<4; i++){
-    let li_ite2=document.createElement('span')
-    let link_ite2=document.createElement('a')
-    link_ite2.setAttribute('id','lin'+i)
-    link_ite2.setAttribute('class','linkes')
-    link_ite2.setAttribute('data-link','section'+i)
-    li_ite2.appendChild(link_ite2)
-    myContain_span.appendChild(li_ite2)  
+let scondeLinkli=document.createElement('a')
+scondeLinkli.setAttribute('href','#our-servecis')
+scondeLinkli.setAttribute('id','scondeLinkli_id')
+scondeLinkli.textContent="servecis"
+scondeLinkli.onclick=function(){
+    removeAll()
+    scondeLinkli.classList.add('heighlite')
 }
-const all_links2=document.querySelectorAll('.linkes');
 
-all_links2.forEach(item2=>{
-    item2.addEventListener('click',()=>{
-        const el2=document.getElementById(item2.getAttribute('data-link'))
+let thirdlinkli=document.createElement('a')
+thirdlinkli.setAttribute('href','#connecting')
+thirdlinkli.setAttribute('id','thirdlinkli_id')
+thirdlinkli.textContent="Conuct us"
+thirdlinkli.onclick=function(){
+    removeAll()
+    thirdlinkli.classList.add('heighlite')
+}
 
-        el2.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        })
+let fourthLinkli=document.createElement('a')
+fourthLinkli.setAttribute('href','#ournews')
+fourthLinkli.setAttribute('id','fourthLinkli_id')
+fourthLinkli.textContent="news"
+fourthLinkli.onclick=function(){
+    removeAll()
+    fourthLinkli.classList.add('heighlite')
+}
 
-    })
-})
+let fifthLinkli=document.createElement('a')
+fifthLinkli.setAttribute('href','file:///D:/real%20estate%20project/login-page.html')
+fifthLinkli.setAttribute('id','fourthLinkli_id')
+fifthLinkli.textContent="Login"
+fifthLinkli.onclick=function(){
+    removeAll()
+    fifthLinkli.classList.add('heighlite')
+}
 
-let mylinke_ho=document.getElementById('link0')
-     mylinke_cona=document.getElementById('link1')
-     mylinke_ser=document.getElementById('link2')
-     mylinke_new=document.getElementById('link3')
+/* dynamic links  */
 
-     mylinke_new.textContent='new'
-     mylinke_ser.textContent='connact us'
-     mylinke_cona.textContent='services'
-     mylinke_ho.textContent='Home'
+/* dynamic links  */
+let firstLink=document.createElement('a')
+firstLink.setAttribute('href','#')
+firstLink.textContent="Home"
 
-let mylinke_ho2=document.getElementById('lin0')
-     mylinke_cona2=document.getElementById('lin1')
-     mylinke_ser2=document.getElementById('lin2')
-     mylinke_new2=document.getElementById('lin3')
+let scondeLink=document.createElement('a')
+scondeLink.setAttribute('href','#our-servecis')
+scondeLink.textContent="servecis"
 
-     mylinke_new2.textContent='new'
-     mylinke_ser2.textContent='services'
-     mylinke_cona2.textContent='connact us'
-     mylinke_ho2.textContent='Home'
+let thirdlink=document.createElement('a')
+thirdlink.setAttribute('href','#connecting')
+thirdlink.textContent="Conuct us"
+
+let fourthLink=document.createElement('a')
+fourthLink.setAttribute('href','#ournews')
+fourthLink.textContent="news"
+
+let fifthLink=document.createElement('a')
+fifthLink.setAttribute('href','file:///D:/real%20estate%20project/login-page.html')
+fifthLink.textContent="Login"
+/* dynamic links  */
+
+
+/*appendchild dynamic links */
+mycontain_Li[0].appendChild(firstLinkli); 
+mycontain_Li[1].appendChild(scondeLinkli); 
+mycontain_Li[2].appendChild(thirdlinkli); 
+mycontain_Li[3].appendChild(fourthLinkli); 
+mycontain_Li[4].appendChild(fifthLinkli); 
+
+myContain_span[0].appendChild(firstLink); 
+myContain_span[1].appendChild(scondeLink); 
+myContain_span[2].appendChild(thirdlink); 
+myContain_span[3].appendChild(fourthLink); 
+myContain_span[4].appendChild(fifthLink); 
+/*appendchild dynamic links */
 
 
 my_button.addEventListener('click',function(){
@@ -116,19 +107,51 @@ my_button.addEventListener('click',function(){
  }
 })
 
-/*start the function of scroll */
-function myscroll(){
-    if(window.scrollY>0){
-        myNave.style.position='fixed'
-    }else{
-        myNave.style.position='static' 
-    }
+function scroll(){
+if(window.scrollY>0){
+    myNave.style.backgroundColor='white'
+    myLogo.style.color='black'
+    myNave.style.transition='all .5s'
+    myToggle.style.color='black'
+    
+    
+    myLinks_Array.forEach(element => {
+        element.classList.add('active-pink')
+        element.classList.add('black')
+  });
+    myNave.style.height='90px'
+}
+ 
+ else{
+    myNave.style.backgroundColor='transparent'
+    myLogo.style.color='white'
+    myToggle.style.color='rgb(189, 189, 189)'
+    myLinks_Array.forEach(element => {
+       
+        element.classList.remove('active-pink')
+        element.classList.remove('black')
+        myNave.style.height='90px'
+    });
+    
+ }
 }
 
-setInterval(myscroll,100)
-/*End the function of scroll */
- 
-let myToggle=document.getElementById('toggle')
+
+function more_scroll(){
+    if (window.scrollY>100){
+        myNave.style.backgroundColor='white'
+        myLogo.style.color='black'
+        myLogo.style.paddingBottom='0px'
+        myNave.style.transition='all .5s'
+        myNave.style.height='70px'
+        
+    
+    }
+}
+ setInterval(scroll,100),
+ setInterval(more_scroll,100)
+
+let myToggle=document.getElementById('toggle'),
  myLink_span=document.querySelectorAll('.nav-toggle span'),
  myClose_icon=document.getElementById('close-icon');
 
@@ -156,54 +179,12 @@ myClose_icon.onclick=function(){
     
 }
 
-//--highlite of  icon
 
-all_links1[0].onclick=function(){
-    removeall()
-    all_links1[0].classList.add('heighlite')
-}
-all_links1[1].onclick=function(){
-    removeall()
-    all_links1[1].classList.add('heighlite')
-}
-all_links1[2].onclick=function(){
-    removeall()
-    all_links1[2].classList.add('heighlite')
-}
-all_links1[3].onclick=function(){
-    removeall()
-    all_links1[3].classList.add('heighlite')
-}
+/*--------------------------------------------------------------------------------------- */
 
-
-   function removeall() { all_links1.forEach(el=>{
-        el.classList.remove('heighlite')
-    })
+function removeAll(){
+    firstLinkli.classList.remove('heighlite')
+    scondeLinkli.classList.remove('heighlite')
+    thirdlinkli.classList.remove('heighlite')
+    fourthLinkli.classList.remove('heighlite')
 }
-
-//--highlite of toggle icon
-
-all_links2[0].onclick=function(){
-    removeall2()
-    all_links2[0].classList.add('heighlite')
-}
-all_links2[1].onclick=function(){
-    removeall2()
-    all_links2[1].classList.add('heighlite')
-}
-all_links2[2].onclick=function(){
-    removeall2()
-    all_links2[2].classList.add('heighlite')
-}
-all_links2[3].onclick=function(){
-    removeall2()
-    all_links2[3].classList.add('heighlite')
-}
-
-
-   function removeall2() { all_links2.forEach(el=>{
-        el.classList.remove('heighlite')
-    })
-}
-  
-    
