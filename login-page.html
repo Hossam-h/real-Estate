@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Build for me</title>
-    <link rel="stylesheet" href="css/css-style.css">
+    <link rel="stylesheet" href="css/login-style.css">
     <link rel="icon" href="css/houseicon.png">
 </head>
 <body>
-    <div class="container-all-login-page">
-        <div class="container-opacity">
-            <div class="container-login">
-            <form action="">
-                <input type="email" placeholder="Enter your username" required>
-                <input type="password" placeholder="Enter your password" id="my-pass" required>
-                <input type="checkbox" id="checkbox"> <span id="show-pass">Show your password</span>
-                <div class="clearfix"></div>
-                <input type="submit">
-                <span>Don't have account ? <a href="file:///D:/real%20estate%20project/signup.html">Signup</a> </span>
-            </form>
-            </div>
-    </div>
-</div>
+    <div class="container-login" id="login">
+        <form action="">
+         <input type="email" placeholder="Enter your username"  id="user_name" required >
+         <input type="password" placeholder="Enter your password" id="my-pass" maxlength="15" required >
+         <input type="checkbox" id="checkbox"><span id="show-pass">Show your password</span>
+         <div class="clearfix"></div>
+         <input type="submit" id="log">
+         <span>Don't have account ? <a href="file:///D:/resturant-project/signup.html">Signup</a> </span>
+     </form>
+     </div>
 <script>
     let myCheckbox=document.getElementById('checkbox'),
 myShow_pass=document.getElementById('show-pass'),
