@@ -53,7 +53,7 @@ fourthLinkli.onclick=function(){
 }
 
 let fifthLinkli=document.createElement('a')
-fifthLinkli.setAttribute('href','file:///D:/real%20estate%20project/login-page.html')
+fifthLinkli.setAttribute('href','./login-page.html')
 fifthLinkli.setAttribute('id','fourthLinkli_id')
 fifthLinkli.textContent="Login"
 fifthLinkli.onclick=function(){
@@ -81,7 +81,7 @@ fourthLink.setAttribute('href','#ournews')
 fourthLink.textContent="news"
 
 let fifthLink=document.createElement('a')
-fifthLink.setAttribute('href','file:///D:/real%20estate%20project/login-page.html')
+fifthLink.setAttribute('href','./login-page.html')
 fifthLink.textContent="Login"
 /* dynamic links  */
 
